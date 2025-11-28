@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Shokher Achol — Timeless Apparel</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#0f172a;
+      --muted:#6b7280;
+      --primary-blue:#0ea5e9;
+      --accent-green:#10b981;
+      --cta:linear-gradient(90deg,var(--primary-blue),var(--accent-green));
+      --radius:10px;
+    }
+
+    *{box-sizing:border-box}
+    body{font-family:'Poppins',system-ui,Arial,sans-serif;color:var(--text);margin:0;background:var(--bg);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 28px;border-bottom:1px solid #eef2f7;position:sticky;top:0;background:rgba(255,255,255,0.98);backdrop-filter:blur(4px);z-index:20}
+    .logo{display:flex;align-items:center;gap:12px;font-weight:700;font-size:18px}
+    .logo img{height:42px;width:auto;border-radius:6px}
+    nav{display:flex;gap:18px;align-items:center}
+    nav a{color:var(--muted);font-weight:500;font-size:14px}
+
+    .mobile-toggle{display:none;background:transparent;border:0;font-size:20px}
+
+    .hero{display:grid;grid-template-columns:1fr 480px;gap:36px;align-items:center;padding:64px 28px}
+    .hero .eyebrow{color:var(--muted);font-weight:600;letter-spacing:0.6px}
+    .hero h1{font-size:44px;margin:12px 0 16px;line-height:1.05}
+    .hero p{color:var(--muted);max-width:640px;margin:0 0 22px}
+    .btn-primary{display:inline-block;padding:12px 20px;border-radius:10px;color:#fff;background:var(--cta);font-weight:600;box-shadow:0 6px 18px rgba(14,165,233,0.12)}
+    .hero img{width:100%;height:420px;object-fit:cover;border-radius:12px;box-shadow:0 8px 30px rgba(2,6,23,0.06)}
+
+    .section{padding:56px 28px}
+    .section h2{font-size:22px;margin:0 0 18px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+
+    .card{background:#fff;border-radius:12px;border:1px solid #f1f5f9;padding:14px;text-align:center}
+    .card img{width:100%;height:260px;object-fit:cover;border-radius:8px}
+    .card h3{margin:12px 0 6px;font-size:16px}
+    .card p{color:var(--muted);font-size:14px;margin:0 0 12px}
+
+    .about{background:#f8fafc;border-radius:12px;padding:22px}
+    .contact-row{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+
+    footer{padding:22px 28px;text-align:center;color:var(--muted);font-size:14px;border-top:1px solid #eef2f7}
+
+    /* Responsive */
+    @media(max-width:980px){
+      .hero{grid-template-columns:1fr;gap:22px;padding:40px 20px}
+      .hero img{height:320px}
+      nav{display:none}
+      .mobile-toggle{display:block}
+    }
+
+    @media(max-width:520px){
+      .hero h1{font-size:28px}
+      .hero img{height:240px}
+    }
+
+    /* Simple utility */
+    .muted{color:var(--muted)}
+    .social a{margin-right:12px;color:var(--muted);font-weight:600}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="image/logo.png" alt="Shokher Achol logo" />
+      <div>
+        <div style="font-weight:700">Shokher Achol</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:2px">Timeless, sustainable apparel</div>
+      </div>
+    </div>
+
+    <nav>
+      <a href="#collections">Collections</a>
+      <a href="#lookbook">Lookbook</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <button class="mobile-toggle" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div>
+        <div class="eyebrow">New Arrival</div>
+        <h1>Shokher Achol — Crafted for everyday elegance</h1>
+        <p>Clean silhouettes, breathable fabrics, and mindful production. Build a wardrobe that feels good and lasts longer.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:12px">
+          <a class="btn-primary" href="#collections">Shop Collections</a>
+          <a style="display:inline-block;padding:12px 18px;border-radius:10px;border:1px solid #e6eef6;color:var(--primary-blue);font-weight:600" href="#lookbook">View Lookbook</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="collections" class="section">
+      <h2>Collections</h2>
+      <div class="grid">
+        <div class="card">
+          <img src="image/herp5.jpg" alt="Essentials collection" />
+          <h3>Essentials</h3>
+          <p class="muted">Everyday tees, shirts, and outerwear</p>
+          <a class="btn-primary" href="#">Explore</a>
+        </div>
+
+        <div class="card">
+          <img src="image/hero10.jpg" alt="Seasonal drop" />
+          <h3>Seasonal Drop</h3>
+          <p class="muted">Limited pieces with handcrafted details</p>
+          <a class="btn-primary" href="">Explore</a>
+        </div>
+    </section>
+
+    <section id="lookbook" class="section">
+      <h2>Lookbook</h2>
+      <p class="muted">Seasonal styling to show how pieces pair together.</p>
+      <div class="grid" style="margin-top:18px">
+        <img src="image/collection1.jpg" alt="Look 1" style="width:100%;height:320px;object-fit:cover;border-radius:12px" />
+        <img src="image/C2.jpg" alt="Look 2" style="width:100%;height:320px;object-fit:cover;border-radius:12px" />
+<img src="image/C3.jpg" alt="Look 2" style="width:100%;height:320px;object-fit:cover;border-radius:12px" />
+<img src="image/C4.jpg" alt="Look 2" style="width:100%;height:320px;object-fit:cover;border-radius:12px" />
+<img src="image/C7.jpg" alt="Look 2" style="width:100%;height:320px;object-fit:cover;border-radius:12px" />
+<img src="image/C6.jpg" alt="Look 2" style="width:100%;height:320px;object-fit:cover;border-radius:12px" />
+<img src="image/C5.jpg" alt="Look 2" style="width:100%;height:320px;object-fit:cover;border-radius:12px" />
+      
+      
+      
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <h2>About Shokher Achol</h2>
+      <div class="about" style="margin-top:12px">
+        <p><strong>Shokher Achol</strong> focuses on thoughtful design and responsible production. We use quality fabrics and partner with ethical manufacturers to reduce waste and create garments that last.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="contact-row" style="margin-top:12px">
+        <div>
+          <p class="muted">Connect with us on Facebook</p>
+          <div class="social">
+            <a href="https://www.facebook.com/profile.php?id=61578220891822" target="_blank" rel="noopener noreferrer"><b>SHOKHER ACHOL</b></a>
+          </div>
+        </div>
+
+        <div style="min-width:220px">
+          <p class="muted">Newsletter</p>
+          <form onsubmit="event.preventDefault();alert('Thanks for subscribing');" style="display:flex;gap:8px">
+            <input type="email" placeholder="Your email" required style="flex:1;padding:10px;border-radius:8px;border:1px solid #e6eef6" />
+            <button type="submit" style="padding:10px 14px;border-radius:8px;border:0;background:var(--primary-blue);color:#fff;font-weight:600">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <strong>Shokher Achol</strong> — All rights reserved
+  </footer>
+
+  <script>
+    function toggleMenu(){
+      const nav = document.querySelector('nav');
+      if(!nav) return;
+      if(nav.style.display === 'flex'){ nav.style.display = 'none'; }
+      else { nav.style.display = 'flex'; nav.style.flexDirection = 'column'; nav.style.position = 'absolute'; nav.style.right = '20px'; nav.style.top = '68px'; nav.style.background = '#fff'; nav.style.padding = '12px'; nav.style.boxShadow = '0 8px 30px rgba(2,6,23,0.08)'; nav.style.borderRadius = '10px'; }
+    }
+  </script>
+</body>
+</html>
